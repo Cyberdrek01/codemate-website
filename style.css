@@ -1,124 +1,130 @@
-/* General Body Styles */
+/* Basic Setup */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0f172a; /* slate-900 */
-    color: #e2e8f0; /* slate-300 */
+    color: #e2e8f0; /* text-slate-200 */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
-/* Updated Gradient Text Style for Animation */
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+/* Header Styling */
+#header {
+    background-color: transparent;
+}
+#header.scrolled {
+    background-color: rgba(15, 23, 42, 0.8); /* bg-slate-900 with opacity */
+    backdrop-filter: blur(10px);
+}
+
+/* Gradient Text */
 .gradient-text {
-    background: linear-gradient(to right, #f97316, #fb923c, #f97316); /* orange-500, orange-400 */
+    background: linear-gradient(90deg, #fb923c, #f97316);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    background-size: 200% auto;
-    animation: animate-gradient 3s linear infinite;
+    animation: animate-gradient 5s infinite ease-in-out;
+    background-size: 200%;
 }
 
-/* Keyframes for the gradient animation */
 @keyframes animate-gradient {
-    to {
-        background-position: 200% center;
+    0% { background-position: 0%; }
+    50% { background-position: 100%; }
+    100% { background-position: 0%; }
+}
+
+/* Glow Effect for Buttons */
+.glow-effect:hover {
+    box-shadow: 0 0 15px #fb923c, 0 0 30px #f97316;
+}
+
+/* Typewriter Cursor */
+#typewriter-text.typing::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+    color: #fb923c; /* orange-400 */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
     }
+}
+
+/* Hero Section 3D Tilt */
+#home {
+    perspective: 1000px;
+}
+#hero-content {
+    transition: transform 0.1s ease;
 }
 
 /* Glassmorphism Effect */
 .glassmorphism {
-    background: rgba(15, 23, 42, 0.6); /* slate-900 with opacity */
+    background: rgba(30, 41, 59, 0.5); /* bg-slate-800 with some opacity */
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(51, 65, 85, 0.5); /* border-slate-700 with opacity */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-/* Header scroll effect */
-#header.scrolled {
-    background: rgba(15, 23, 42, 0.8);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Button Glow Effect */
-.glow-effect {
-    box-shadow: 0 0 15px rgba(249, 115, 22, 0.5);
-}
-
-/* Typewriter cursor effect */
-#typewriter-text.typing::after {
-    content: '|';
-    animation: blink 1s step-end infinite;
-    color: #f97316; /* orange-500 */
-}
-
-@keyframes blink {
-    from, to { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-/* Hero Section additions */
-#home {
-    perspective: 1000px;
-}
-
-#hero-content {
-    transition: transform 0.1s ease-out;
-}
-
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-/* Scroll Reveal Animation */
+/* Reveal on Scroll Animation */
 .reveal {
+    position: relative;
+    transform: translateY(100px);
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: all 1s ease;
 }
-
-.reveal.visible {
+.reveal.active {
+    transform: translateY(0px);
     opacity: 1;
-    transform: translateY(0);
 }
 
-/* Event Modal Styles */
-#event-modal {
-    transition: opacity 0.3s ease-in-out;
+/* Event Card Hover Border */
+.event-card {
+    border: 2px solid transparent;
 }
-#event-modal.hidden {
-    pointer-events: none;
-    opacity: 0;
+.event-card:hover {
+    border-color: #fb923c;
 }
-#event-modal:not(.hidden) {
+
+/* Modal Styling */
+#event-modal.flex {
     display: flex;
-    opacity: 1;
 }
 #modal-content {
-    transition: transform 0.3s ease-in-out;
-    transform: scale(0.95);
+    animation: fadeIn 0.3s ease;
 }
-#event-modal:not(.hidden) #modal-content {
-    transform: scale(1);
-}
-
-/* Contact Form Styles */
-.form-input {
-    width: 100%;
-    background-color: rgba(30, 41, 59, 0.7); /* slate-800 with opacity */
-    border: 1px solid #334155; /* slate-700 */
-    border-radius: 0.5rem;
-    padding: 0.75rem 1rem;
-    color: #e2e8f0; /* slate-300 */
-    transition: border-color 0.3s, box-shadow 0.3s;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-.form-input:focus {
-    outline: none;
-    border-color: #f97316; /* orange-500 */
-    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.5);
+/* Social Link Buttons */
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: rgba(30, 41, 59, 0.8); /* bg-slate-800 with opacity */
+    color: #cbd5e1; /* text-slate-300 */
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 600; /* font-semibold */
+    font-size: 1.125rem; /* text-lg */
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
-.form-input::placeholder {
-    color: #64748b; /* slate-500 */
+.social-link:hover {
+    transform: translateY(-4px);
+    background-color: #fb923c; /* orange-500 */
+    color: white;
+    box-shadow: 0 10px 20px rgba(251, 146, 60, 0.2);
 }
 
