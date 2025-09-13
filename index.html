@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codemate Club - NEHU</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-900">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <img src="codemate-logo.png" alt="Codemate Club Logo" class="h-10">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-slate-300 hover:text-orange-400 transition-colors">Home</a>
+                <a href="#about" class="text-slate-300 hover:text-orange-400 transition-colors">About</a>
+                <a href="#events" class="text-slate-300 hover:text-orange-400 transition-colors">Events</a>
+                <a href="#team" class="text-slate-300 hover:text-orange-400 transition-colors">Team</a>
+                <a href="#contact" class="text-slate-300 hover:text-orange-400 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-slate-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800">
+            <a href="#home" class="block py-2 px-6 text-slate-300 hover:bg-slate-700">Home</a>
+            <a href="#about" class="block py-2 px-6 text-slate-300 hover:bg-slate-700">About</a>
+            <a href="#events" class="block py-2 px-6 text-slate-300 hover:bg-slate-700">Events</a>
+            <a href="#team" class="block py-2 px-6 text-slate-300 hover:bg-slate-700">Team</a>
+            <a href="#contact" class="block py-2 px-6 text-slate-300 hover:bg-slate-700">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center relative overflow-hidden">
+            <div id="particles-js" class="absolute inset-0 z-0"></div>
+            <div class="bg-black/70 absolute inset-0"></div>
+            <div id="hero-content" class="relative z-10 px-6">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 reveal">
+                    Building Coding Culture, <span class="gradient-text">Together</span>.
+                </h1>
+                <p id="typewriter-text" class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-8 reveal"></p>
+                <div class="reveal">
+                    <a href="#about" class="bg-orange-500 text-white font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition duration-300 glow-effect text-lg">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-4xl font-bold text-white">About <span class="gradient-text">Us</span></h2>
+                </div>
+                <div class="max-w-4xl mx-auto text-center reveal">
+                    <p class="text-slate-400 text-lg leading-relaxed">
+                        Codemate Club was born in December 2022 out of a collective desire among NEHU students to create a space where coding enthusiasts could collaborate, compete, and learn together. What began as small group discussions and problem-solving sessions soon evolved into a structured club, bringing students across disciplines under one roof to nurture innovation and technical growth.
+                    </p>
+                </div>
+
+                <div class="text-center mt-12 reveal">
+                    <h3 class="text-3xl font-bold text-white mb-4">Our <span class="gradient-text">Vision</span></h3>
+                    <p class="text-slate-400 max-w-2xl mx-auto text-lg">
+                        To foster a strong, collaborative, and innovative coding community in NEHU and beyond.
+                    </p>
+                </div>
+
+                <div class="text-center mt-10">
+                    <h3 class="text-3xl font-bold text-white mb-8 reveal">Our <span class="gradient-text">Mission</span></h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="glassmorphism p-6 rounded-lg reveal">
+                            <h4 class="text-xl font-semibold text-white mb-2">Engage & Compete</h4>
+                            <p class="text-slate-400">Organize coding competitions, hackathons, and workshops.</p>
+                        </div>
+                        <div class="glassmorphism p-6 rounded-lg reveal">
+                             <h4 class="text-xl font-semibold text-white mb-2">Build Skills</h4>
+                            <p class="text-slate-400">Build industry-ready skills through peer-to-peer learning.</p>
+                        </div>
+                        <div class="glassmorphism p-6 rounded-lg reveal">
+                             <h4 class="text-xl font-semibold text-white mb-2">Innovate</h4>
+                            <p class="text-slate-400">Encourage students to work on real-world projects and research.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities & Initiatives Section -->
+        <section id="events" class="py-20 bg-slate-900/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-4xl font-bold text-white">Activities & <span class="gradient-text">Initiatives</span></h2>
+                    <p class="text-slate-400 mt-2">Where ideas come to life.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Event Card -->
+                    <div class="event-card glassmorphism rounded-xl overflow-hidden hover:border-orange-400 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer reveal"
+                         data-title="CodeFest Round 01"
+                         data-image="images/event-codefest1.jpg"
+                         data-description="An offline coding and problem-solving competition to challenge our members and test their skills in a competitive environment.">
+                        <img src="images/event-codefest1.jpg" alt="CodeFest Round 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white">CodeFest Round 01</h3>
+                            <p class="text-slate-400 mt-2">An offline coding and problem-solving competition.</p>
+                        </div>
+                    </div>
+                     <!-- Event Card -->
+                     <div class="event-card glassmorphism rounded-xl overflow-hidden hover:border-orange-400 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer reveal"
+                          data-title="CodeFest Round 02"
+                          data-image="images/event-codefest2.jpg"
+                          data-description="Testing speed and accuracy with a competitive coding and typing event designed to push participants to their limits.">
+                        <img src="images/event-codefest2.jpg" alt="CodeFest Round 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white">CodeFest Round 02</h3>
+                            <p class="text-slate-400 mt-2">A competitive coding and typing event.</p>
+                        </div>
+                    </div>
+                     <!-- Event Card -->
+                     <div class="event-card glassmorphism rounded-xl overflow-hidden hover:border-orange-400 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer reveal"
+                          data-title="Orientation Sessions"
+                          data-image="images/event-orientation.jpg"
+                          data-description="Welcoming and guiding new members into the Codemate community, introducing them to our culture, goals, and the exciting journey ahead.">
+                        <img src="images/event-orientation.jpg" alt="Orientation Sessions" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white">Orientation Sessions</h3>
+                            <p class="text-slate-400 mt-2">Welcoming and guiding new members.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Events Section -->
+        <section id="recent-events" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-4xl font-bold text-white">Recent <span class="gradient-text">Events</span></h2>
+                    <p class="text-slate-400 mt-2">See what we've been up to lately.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Event Card -->
+                    <div class="event-card glassmorphism rounded-xl overflow-hidden hover:border-orange-400 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer reveal"
+                         data-title="Induction 3.0 – Intro to Tech & Careers"
+                         data-image="images/event-induction3.jpg"
+                         data-description="A special session organized for the new juniors to introduce them to the world of technology, different career paths, and the Codemate Club's role in their journey.">
+                        <img src="images/event-induction3.jpg" alt="Induction 3.0" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white">Induction 3.0 – Intro to Tech & Careers</h3>
+                            <p class="text-slate-400 mt-2">Organized for the new juniors.</p>
+                        </div>
+                    </div>
+                    <!-- Event Card -->
+                    <div class="event-card glassmorphism rounded-xl overflow-hidden hover:border-orange-400 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer reveal"
+                         data-title="Hostel Havoc 1.0"
+                         data-image="images/event-cricket.jpg"
+                         data-description="A cricket competition organized to foster community bonding and camaraderie among members beyond the world of coding.">
+                        <img src="images/event-cricket.jpg" alt="Hostel Havoc 1.0" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white">Hostel Havoc 1.0</h3>
+                            <p class="text-slate-400 mt-2">Organized cricket competition fostering community bonding.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-20 bg-slate-900/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-4xl font-bold text-white">Achievements & <span class="gradient-text">Impact</span></h2>
+                    <p class="text-slate-400 mt-2">Making a mark, one step at a time.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8 text-center">
+                    <div class="glassmorphism rounded-xl p-8 reveal">
+                        <h3 class="text-4xl font-extrabold gradient-text mb-2 counter" data-target="200" data-suffix="+">0+</h3>
+                        <p class="text-slate-400">Active members</p>
+                    </div>
+                    <div class="glassmorphism rounded-xl p-8 reveal">
+                        <h3 class="text-4xl font-extrabold gradient-text mb-2 counter" data-target="10" data-suffix="+">0+</h3>
+                        <p class="text-slate-400">Events Organized</p>
+                    </div>
+                    <div class="glassmorphism rounded-xl p-8 reveal">
+                        <h3 class="text-4xl font-extrabold gradient-text mb-2">IEEE</h3>
+                        <p class="text-slate-400">Collaboration</p>
+                    </div>
+                    <div class="glassmorphism rounded-xl p-8 reveal">
+                        <h3 class="text-4xl font-extrabold gradient-text mb-2">Tapnex</h3>
+                        <p class="text-slate-400">Collaboration</p>
+                    </div>
+                     <div class="glassmorphism rounded-xl p-8 reveal">
+                        <h3 class="text-4xl font-extrabold gradient-text mb-2">Inclusive</h3>
+                        <p class="text-slate-400">Community</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-4xl font-bold text-white">Meet the <span class="gradient-text">Team</span></h2>
+                    <p class="text-slate-400 mt-2">The core members driving the club forward.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/dibakar-patar.jpg" alt="Dibakar Patar" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Dibakar Patar</h4>
+                        <p class="gradient-text font-semibold">Club Lead</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/sajeed-ahmed.jpg" alt="Sajeed Ahmed" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Sajeed Ahmed</h4>
+                        <p class="gradient-text font-semibold">People & Finance Manager</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/rideep-kumar-kakati.jpg" alt="Rideep Kumar Kakati" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Rideep Kumar Kakati</h4>
+                        <p class="gradient-text font-semibold">Marketing & Media</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/chandrasmita-gayan.jpg" alt="Chandrasmita Gayan" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Chandrasmita Gayan</h4>
+                        <p class="gradient-text font-semibold">Marketing & Media</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/bibek-riyan-barman.jpg" alt="Bibek Riyan Barman" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Bibek Riyan Barman</h4>
+                        <p class="gradient-text font-semibold">Technical Team</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/manas-jyoti-boro.jpg" alt="Manas Jyoti Boro" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Manas Jyoti Boro</h4>
+                        <p class="gradient-text font-semibold">Technical Team</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/nikunj-maheshwari.jpg" alt="Nikunj Maheshwari" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Nikunj Maheshwari</h4>
+                        <p class="gradient-text font-semibold">Technical Team</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/anurag-saud.jpg" alt="Anurag Saud" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Anurag Saud</h4>
+                        <p class="gradient-text font-semibold">Technical Team</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/sameer-kumar.jpg" alt="Sameer Kumar" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Sameer Kumar</h4>
+                        <p class="gradient-text font-semibold">Creative & Content</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/sazeed-taj.jpg" alt="Sazeed Taj" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Sazeed Taj</h4>
+                        <p class="gradient-text font-semibold">Creative & Content</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/himangshu-das.jpg" alt="Himangshu Das" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Himangshu Das</h4>
+                        <p class="gradient-text font-semibold">Creative & Content</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/tina-boro.jpg" alt="Tina Boro" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Tina Boro</h4>
+                        <p class="gradient-text font-semibold">Creative & Content</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/bandeep-bhatta.jpg" alt="Bandeep Bhatta" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Bandeep Bhatta</h4>
+                        <p class="gradient-text font-semibold">Event Management</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/ayaan-hafiz.jpg" alt="Ayaan Hafiz" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Ayaan Hafiz</h4>
+                        <p class="gradient-text font-semibold">Event Management</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/indraneel-chowdhury.jpg" alt="Indraneel Chowdhury" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Indraneel Chowdhury</h4>
+                        <p class="gradient-text font-semibold">Event Management</p>
+                    </div>
+                    <!-- Team Member -->
+                    <div class="text-center reveal">
+                        <img src="images/vivekananda-biradar.jpg" alt="Vivekananda Biradar" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-slate-700">
+                        <h4 class="text-xl font-bold text-white mt-4">Vivekananda Biradar</h4>
+                        <p class="gradient-text font-semibold">Event Management</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Contact Section -->
+         <section id="contact" class="py-20 bg-slate-900/50">
+            <div class="container mx-auto px-6 text-center reveal">
+                <h2 class="text-4xl font-bold text-white mb-4">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto mb-8">
+                    Have questions or want to collaborate? We’d love to hear from you.
+                </p>
+                <form id="contact-form" class="max-w-xl mx-auto">
+                    <div id="form-message" class="mb-4 text-green-400 hidden"></div>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <input type="text" name="name" placeholder="Your Name" class="form-input" required>
+                        <input type="email" name="email" placeholder="Your Email" class="form-input" required>
+                    </div>
+                    <textarea name="message" rows="5" placeholder="Your Message" class="form-input mt-6" required></textarea>
+                    <button type="submit" class="bg-orange-500 text-white font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition duration-300 glow-effect text-lg mt-6">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950/50 py-6">
+        <div class="container mx-auto px-6 text-center text-slate-400">
+            <p>&copy; 2025 Codemate Club, NEHU. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Event Modal -->
+    <div id="event-modal" class="fixed inset-0 bg-black/80 z-50 hidden items-center justify-center p-4">
+        <div id="modal-content" class="glassmorphism rounded-lg max-w-2xl w-full relative">
+            <button id="modal-close" class="absolute -top-4 -right-4 text-white bg-orange-500 rounded-full h-10 w-10 flex items-center justify-center text-2xl">&times;</button>
+            <img id="modal-image" src="" alt="Event Image" class="w-full h-64 object-cover rounded-t-lg">
+            <div class="p-6">
+                <h3 id="modal-title" class="text-3xl font-bold text-white mb-2"></h3>
+                <p id="modal-description" class="text-slate-300"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
